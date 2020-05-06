@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="456.0" prefWidth="549.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.SalaryController">
+   <children>
+      <Pane prefHeight="456.0" prefWidth="549.0">
+         <children>
+            <ImageView fitHeight="55.0" fitWidth="284.0" layoutX="29.0" layoutY="14.0">
+               <image>
+                  <Image url="@salary.PNG" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="412.0" layoutY="341.0">
+               <image>
+                  <Image url="@salaryicon.PNG" />
+               </image>
+            </ImageView>
+            <Line endX="404.0" endY="9.0" layoutX="122.0" layoutY="430.0" startX="-102.0" startY="9.0" />
+            <Line endX="19.0" endY="10.5" layoutX="506.0" layoutY="12.0" startX="20.5" startY="426.5" />
+            <Line endX="24.5" endY="22.000015258789062" layoutX="-5.0" layoutY="-4.0" startX="24.5" startY="442.5" />
+            <Line endX="328.0" endY="14.5" layoutX="-1.0" layoutY="7.0" startX="526.0" startY="14.5" />
+            <Label layoutX="55.0" layoutY="103.0" text="시급">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="55.0" layoutY="174.0" text="일일 근무 시간">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="55.0" layoutY="237.0" text="한달 근무 일수">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="55.0" layoutY="304.0" text="세금(3.3%)">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="55.0" layoutY="373.0" text="당신의 월급은">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Text_sal" layoutX="226.0" layoutY="102.0">
+               <font>
+                  <Font size="14.0" />
+               </font></TextField>
+            <TextField fx:id="Text_hour" layoutX="226.0" layoutY="173.0">
+               <font>
+                  <Font size="14.0" />
+               </font></TextField>
+            <TextField fx:id="Text_month" layoutX="226.0" layoutY="236.0">
+               <font>
+                  <Font size="14.0" />
+               </font></TextField>
+            <RadioButton fx:id="tax_true" layoutX="226.0" layoutY="306.0" mnemonicParsing="false" onAction="#taxRadio" text="적용">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="tax" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="tax_false" layoutX="313.0" layoutY="306.0" mnemonicParsing="false" onAction="#taxRadio" text="미적용" toggleGroup="$tax">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="16.0" />
+               </font>
+            </RadioButton>
+            <TextField fx:id="result" layoutX="226.0" layoutY="372.0">
+               <font>
+                  <Font size="14.0" />
+               </font></TextField>
+            <Button fx:id="computeBtn" layoutX="425.0" layoutY="143.0" mnemonicParsing="false" onAction="#computeBtn" prefHeight="33.0" prefWidth="77.0" text="계산">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <Button fx:id="resetBtn" layoutX="425.0" layoutY="234.0" mnemonicParsing="false" onAction="#resetBtn" prefHeight="33.0" prefWidth="77.0" text="초기화">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
